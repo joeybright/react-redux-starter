@@ -1,0 +1,35 @@
+{
+  "name": "health-data-visualization",
+  "version": "1.0.0",
+  "description": "Explorations in visualizing health data",
+  "main": "entry.jsx",
+  "scripts": {
+    "webpack": "webpack --progress --colors",
+    "dev": "webpack-dev-server --progress --colors",
+    "start": "npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeybright/health-data-visualization.git"
+  },
+  "author": "Joey Bright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeybright/health-data-visualization/issues"
+  },
+  "homepage": "https://github.com/joeybright/health-data-visualization#readme",
+  "devDependencies": {
+    "autoprefixer-loader": "^3.1.0",
+    "css-loader": "^0.22.0",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "jsx-loader": "^0.13.2",
+    "node-sass": "^3.1.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.3",
+    "sass-loader": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "underscore": "^1.8.3",
+    "webpack": "^1.12.3",
+    "webpack-dev-server": "^1.12.1"
+  }
+}

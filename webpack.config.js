@@ -4,26 +4,40 @@ var webpack = require('webpack')
 
 // webpack.config.js
 module.exports = {
-  entry: './entry.jsx',
 
-  output: {
-    filename: 'bundle.js',
-    path: './',
-    libraryTarget: 'umd'
-  },
+    entry: './entry.jsx',
 
-  module: {
-    loaders: [
-      { test: /\.scss$/, loader: extractTextPlugin.extract('css!autoprefixer-loader!sass'), exclude: /node_modules/},
-      { test: /\.jsx$/, loader: 'jsx-loader' }
-    ]
-  },
+    output: {
+        filename: 'bundle.js',
+        path: './',
+        libraryTarget: 'umd'
+    },
 
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({minimize: true}),
-    new extractTextPlugin('style.css', {
+    module: {
+        loaders: [
+            {
+                test: /\.scss$/,
+                loader: extractTextPlugin.extract('css!autoprefixer-loader!sass'),
+                exclude: /node_modules/
+            },
+            {
+                test: [/\.jsx$/, /\.js$/],
+                loader: 'babel',
+                query: {
+                    presets: [
+                        'react',
+                        'babel-preset-es2015'
+                    ]
+                }
+            },
+        ]
+    },
+
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({minimize: true}),
+        new extractTextPlugin('style.css', {
             allChunks: true
         })
-  ]
+    ]
 
 }

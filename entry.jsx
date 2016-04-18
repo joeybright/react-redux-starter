@@ -2,9 +2,9 @@
 // entry.jsx
 import React from 'react';
 import { render } from 'react-dom';
-import App from './components/App.jsx';
+import AppContainer from './containers/AppContainer';
 
 render(
-    <App />,
+    <AppContainer />,
     document.getElementById('app')
 );

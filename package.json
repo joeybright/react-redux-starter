@@ -4,9 +4,8 @@
   "description": "Explorations in visualizing health data",
   "main": "entry.jsx",
   "scripts": {
-    "webpack": "webpack --progress --colors",
-    "dev": "webpack-dev-server --progress --colors",
-    "start": "npm run dev"
+    "build": "webpack --progress --colors",
+    "start": "webpack-dev-server --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -35,6 +34,7 @@
     "style-loader": "^0.13.0",
     "underscore": "^1.8.3",
     "webpack": "^1.12.3",
-    "webpack-dev-server": "^1.12.1"
+    "webpack-dev-server": "^1.12.1",
+    "webpack-merge": "^0.11.0"
   }
 }

@@ -13,6 +13,7 @@ export default function configureStore(initialState) {
         window.devToolsExtension ? window.devToolsExtension() : f => f
     )(createStore);
 
-    return store = finalCreateStore(combinedReducers, {});
-
+    const store = finalCreateStore(combinedReducers, {});
+    return store;
+    
 };

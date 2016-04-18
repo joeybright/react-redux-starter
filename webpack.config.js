@@ -1,6 +1,10 @@
 
 var webpack = require('webpack')
     extractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack');
+const extractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanPlugin = require('clean-webpack-plugin');
 
 // webpack.config.js
 module.exports = {

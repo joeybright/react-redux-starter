@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var merge = require('webpack-merge');
 var extractTextPlugin = require('extract-text-webpack-plugin');
 var CleanPlugin = require('clean-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
 const BUILD_DIR = './build';
@@ -40,6 +41,17 @@ const common = {
     plugins: [
         new extractTextPlugin('style.css', {
             allChunks: true
+        }),
+        new HtmlWebpackPlugin({
+            template: 'index.ejs',
+            title: 'React-Redux-Starter',
+            appMountId: 'app',
+            inject: false,
+            minify: {
+                caseSensetive: true,
+                collapseWhitespace: true,
+                removeComments: true
+            }
         })
     ]
 

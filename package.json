@@ -5,7 +5,9 @@
   "main": "entry.jsx",
   "scripts": {
     "build": "webpack --progress --colors",
-    "start": "webpack-dev-server --progress --colors"
+    "stats": "webpack --profile --json > stats.json",
+    "start": "webpack-dev-server --progress --colors",
+    "test": "mocha -w tests/browser.js tests/**/*.js"
   },
   "repository": {
     "type": "git",

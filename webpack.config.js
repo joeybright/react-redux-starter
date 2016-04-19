@@ -89,6 +89,7 @@ if (TARGET === 'start' || !TARGET) {
 
 // Production specific webpack configuration
 if (TARGET === 'build') {
+if (TARGET === 'build' || TARGET === 'stats') {
 
     module.exports = merge(common, {
 
